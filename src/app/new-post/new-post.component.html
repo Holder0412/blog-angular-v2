@@ -1,0 +1,17 @@
+<div>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div>
+      <label for="title">
+        Titre : 
+      </label>
+      <input type="text" id="title" class="form-control" name="title" ngModel required>
+    </div>
+    <div>
+      <label for="content">
+        Contenu : 
+      </label>
+      <input type="text" id="content" class="form-control" name="content" ngModel required>
+    </div>
+      <button class="btn btn-primary" type="submit" [disabled]="f.invalid">Enregistrer</button>
+  </form>
+</div>
